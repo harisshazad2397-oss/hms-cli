@@ -1,4 +1,5 @@
 #include "ui_manager.hpp"
+#include "../screens/screen.hpp" 
 
 UIManager* UIManager::s_instance = nullptr;
 
@@ -35,6 +36,7 @@ void UIManager::handle_event(sf::RenderWindow& window, const sf::Event& event) {
     if (m_ptr_current_screen != nullptr) {
         m_ptr_current_screen->handle_event(window, event);
     }
+    
 }
 
 void UIManager::update() {
